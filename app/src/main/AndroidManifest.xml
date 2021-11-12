@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Loader">
 
         <activity
-            android:name=".presentation.screens.LoaderActivity"
+            android:name=".presentation.screens.loader.LoaderActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
