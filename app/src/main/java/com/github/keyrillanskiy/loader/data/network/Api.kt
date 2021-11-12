@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface Api {
     
     @GET("netology-code/rn-task/master/netology.json")
-    suspend fun fetchThemes(): Flow<ThemesResponse>
+    suspend fun fetchThemes(): ThemesResponse
     
 }

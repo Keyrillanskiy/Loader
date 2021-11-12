@@ -14,7 +14,7 @@ fun createRetrofit(): Retrofit {
     return Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(httpClient())
-        .addConverterFactory(Json.asConverterFactory(contentType))
+        .addConverterFactory(jsonConfiguration().asConverterFactory(contentType))
         .build()
 }
 
@@ -24,3 +24,5 @@ fun httpClient(): OkHttpClient {
         .addInterceptor(loggingInterceptor)
         .build()
 }
+
+fun jsonConfiguration(): Json = Json { ignoreUnknownKeys = true }
